@@ -3,10 +3,10 @@ Promtail is an agent which ships the contents of local logs to a private Grafana
 
 Usage example:
 #launch promtail with your own configuration file.\
-**docker run --name <<container_name>> --net=host --ipc=host --uts=host --pid=host --log-opt tag="{{.Name}}"  --security-opt=seccomp=unconfined --privileged --rm -v <file location path>/promtail-config.yaml:/opt/promtail-config.yaml -v /:/host <<image>>**
+**docker run --name <<container_name>> --net=host --ipc=host --uts=host --pid=host --log-opt tag="{{.Name}}"  --security-opt=seccomp=unconfined --privileged --rm -v <<file_location_path>>/promtail-config.yaml:/opt/promtail-config.yaml -v /:/host <<promtail_image>>**
 
-#<<file location path>> for windows ex: C:\Users\Armedia\Docker\promtail-config.yaml
-#<<file location path>> for linux ex: /home/Armedia/Docker\promtail-config.yaml
+#<<file_location_path>> for windows ex: C:\Users\Armedia\Docker\promtail-config.yaml\
+#<<file_location_path>> for linux ex: /home/Armedia/Docker\promtail-config.yaml
 
 #Kindly use log output tags while creating new containers, it will help visualise logs.
 #For example --log-opt tag="{{.ImageName}}/{{.Name}}/{{.ID}}"
